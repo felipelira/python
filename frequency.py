@@ -8,13 +8,14 @@
 import sys
 from collections import Counter
 
-file = open(sys.argv[1]) 
+file = open(sys.argv[1])
 
 list = []
 for line in file:
-	name = line.strip().split("\t")[1]
-	list.append(name)
-  print("Subject"+"\t"+"Frequency")
+        name = line.strip().split("\t")[1]
+        name_correct = name.split("|")[0] + "|" + name.split("|")[1] + "|" +  name.split("|")[2] + "|" +  name.split("|")[3]+"|"
+        list.append(name_correct)
+
 for i in Counter(list).most_common():
-	print i[0]+"\t"+ str(i[1])
+        print i[0]+"\t"+ str(i[1])
 
