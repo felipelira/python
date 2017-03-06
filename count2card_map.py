@@ -27,5 +27,5 @@ for gene in map:
 
 for name in list:
         for k, v in dict.iteritems():
-                if name == k:
-                        print name +"\t"+ dict[name]+"\t"+dict_count[name]
+        #        if name == k:
+                 print name +"\t"+ dict[name]+"\t"+dict_count[name]
