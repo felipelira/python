@@ -32,7 +32,7 @@ for result in blast:
 	qlen = result.strip().split("\t")[8]
 	slen = result.strip().split("\t")[11]
 	percent = (float(qlen)/float(slen))*100
-	if percent >= 95:	# adjust the percentage of coverage between query and subject
+	if percent >= 95:	# adjust the percentage of coverage between query_length/subject_length
 				# al values equal or greater than this threshold are accecpted as a valid query sequence
 		queries[query] = match
 
