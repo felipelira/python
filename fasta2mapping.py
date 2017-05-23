@@ -1,17 +1,12 @@
 #!/usr/bin/env python
-
 # Felipe Lira Jan/2017 
-#
 #	From a genomic file (NCBI format), creates a description file to use as mapping file
-#
 #	usage: fasta2mapping.py fasta.file > output.txt
-
 
 import sys
 from Bio import SeqIO
 
 dict = {}
-
 
 file = open(sys.argv[1], "r")
 
