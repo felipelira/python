@@ -16,21 +16,3 @@ for record in parse:
 	sequence = record.description + '\n' + str(record.seq)
 	output.write('>' + sequence)
 	output.close()#print sequence
-
-
-
-
-
-
-
-inhandle = sys.argv[1] # file containing the fasta sequence which you want to extract
-fasta = sys.argv[2] # name of the sequence to be extracted
-
-parse = SeqIO.parse(open(inhandle, 'r'), "fasta")
-
-for record in parse:
-	if record.id == fasta:
-		output = open(record.id + '.fasta', "w")
-		sequence = '>' + record.description + '\n' + str(record.seq)
-		output.write(sequence)
-		output.close()#print sequence
