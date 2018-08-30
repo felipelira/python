@@ -6,19 +6,19 @@
 # created to include in the pipeline for metagenomic analysis to detect 
 # antimicrobial resistance genes using Resfinder database
 
-# bhit.file  obtained with blast_bhit.py (tabular BLAST) needs to have this format:
-# qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen
+# blast.output (tabular BLAST) needs to be generated with this format:
+  # qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen
 
-# Usage: bhit_by_coverage.py bhit.file > outfile
+# Usage: bhit_by_coverage.py blast.output > outfile
 
 import sys
 from Bio import SeqIO
 
-bhit = open(sys.argv[1], "r")
+blast = open(sys.argv[1], "r")
 
 d = {}
 
-for line in bhit:
+for line in blast:
         subject = line.strip().split("\t")[0]
         identity = float(line.strip().split("\t")[2])
         match_length = float(line.split("\t")[3]) # length of match
