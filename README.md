@@ -6,4 +6,5 @@ Sort of scripts created for specific proposes during the elaboration and develop
 	gbk2contig.py
 		Extract contigs from .gbk files and save them as .gbk
 		
-	
+	bhit_by_coverage.py
+		Filter blast.output matches (tabular format) by coverage.
