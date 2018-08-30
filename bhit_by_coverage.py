@@ -1,14 +1,15 @@
-  GNU nano 2.2.6                     File: bhit2cover.py                                        Modified  
+  GNU nano 2.2.6                     File: bhit_by_coverage.py                                        Modified  
 
 #!/usr/bin/env python
 # Felipe Lira 2017
+
 # created to include in the pipeline for metagenomic analysis to detect 
 # antimicrobial resistance genes using Resfinder database
 
 # bhit.file  obtained with blast_bhit.py (tabular BLAST) needs to have this format:
 # qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen
 
-# Usage: bhit2cover.py bhit.file > outfile
+# Usage: bhit_by_coverage.py bhit.file > outfile
 
 import sys
 from Bio import SeqIO
