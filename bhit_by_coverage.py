@@ -6,7 +6,7 @@
 # created to include in the pipeline for metagenomic analysis to detect 
 # antimicrobial resistance genes using Resfinder database
 
-# blast.output (tabular BLAST) needs to be generated with this format:
+# blast.output (tabular BLAST) needs to be generated with this format (include 'qlen' and 'slen'):
   # qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen
 
 # Usage: bhit_by_coverage.py blast.output > outfile
